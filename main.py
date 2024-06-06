@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import pandas as pd
 
+# Gerar dados aleatórios
+np.random.seed(42)  # Para garantir que os resultados sejam reproduzíveis
+n_samples = 10
 
 # 1. Escolha do número de clusters (K)
 n_clusters = 5
 
 # 2. Base de dados fixa (Inicialização)
-df = pd.read_csv('data.csv')
-X = df.values  # Obtém os valores como uma matriz NumPy
+X = np.random.rand(n_samples, 2) * 10  # Coordenadas aleatórias entre 0 e 10
 
 # 3. Aplicar o K-Means (Inicialização dos centróides e Repetição)
 kmeans = KMeans(n_clusters=n_clusters, random_state=42)
