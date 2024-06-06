@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
-import pandas as pd
 
 # Gerar dados aleatórios
 np.random.seed(42)  # Para garantir que os resultados sejam reproduzíveis
