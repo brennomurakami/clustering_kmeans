@@ -1,16 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+import pandas as pd
+
 
 # 1. Escolha do número de clusters (K)
-n_clusters = 3
+n_clusters = 5
 
 # 2. Base de dados fixa (Inicialização)
-X = np.array([
-    [1, 2], [1, 4], [1, 0],
-    [4, 2], [4, 4], [4, 0],
-    [9, 2], [9, 4], [9, 0]
-])
+df = pd.read_csv('data.csv')
+X = df.values  # Obtém os valores como uma matriz NumPy
 
 # 3. Aplicar o K-Means (Inicialização dos centróides e Repetição)
 kmeans = KMeans(n_clusters=n_clusters, random_state=42)
